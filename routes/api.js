@@ -9,6 +9,7 @@ var User = require("../models/user");
 var Book = require("../models/book");
 
 router.post('/signup', function(req, res) {
+  console.log('signup');
   if (!req.body.username || !req.body.password) {
     res.json({success: false, msg: 'Please pass username and password.'});
   } else {
